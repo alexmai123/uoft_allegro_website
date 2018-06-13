@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
-import './index.css';
-import './css/font-awesome.min.css';
+// import './App.css';
+// import './index.css';
+// import './css/font-awesome.min.css';
 import './css/main.css';
 import background from './img/allegro2018/bg.jpg';
 // import background from './img/allegro2018/569A2325.jpg';
@@ -10,7 +10,6 @@ import background from './img/allegro2018/bg.jpg';
 import overlay from './img/overlay.png';
 
 class App extends Component {
-
   render() {
     const bgStyle = {
       position: "absolute",
@@ -28,7 +27,7 @@ class App extends Component {
     };
     return (
       <div className="App">
-        <div id="wrapper" className="fade-in bg" style={bgStyle}>
+        <div id="wrapper" className="fade-in">
           <div id="intro">
             <h1>U of T<br />
               Allegro Choir</h1>
