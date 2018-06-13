@@ -1,17 +1,37 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-// import './App.css';
-import './css/main.css'
-import background from './img/allegro2018/569A2331.jpg';
+import './App.css';
+import './index.css';
+import './css/font-awesome.min.css';
+import './css/main.css';
+import background from './img/allegro2018/bg.jpg';
+// import background from './img/allegro2018/569A2325.jpg';
+// import background from './img/bg.jpg';
+import overlay from './img/overlay.png';
 
 class App extends Component {
+
   render() {
+    const bgStyle = {
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      backgroundColor: "#212931",
+      backgroundImage: `url(${overlay}), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${background})`,
+      backgroundSize: 'auto,								auto,														100% auto',
+      backgroundPosition: 'center,								center,														top center',
+      backgroundRepeat: 'repeat,								no-repeat,													no-repeat',
+      backgroundAttachment: 'scroll,								scroll,														scroll',
+      zIndex: '-1',
+    };
     return (
       <div className="App">
-        <div id="wrapper" className="fade-in" style={{backgroundImage:`url(${background})`}}>
+        <div id="wrapper" className="fade-in bg" style={bgStyle}>
           <div id="intro">
-            <h1>This is<br />
-              Massively</h1>
+            <h1>U of T<br />
+              Allegro Choir</h1>
             <p>A free, fully responsive HTML5 + CSS3 site template designed by <a href="https://html5up.net">HTML5 UP</a><br />
               and distributed by <a href="https://themewagon.com/">ThemeWagon</a>.</p>
             <ul className="actions">
