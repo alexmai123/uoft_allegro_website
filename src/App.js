@@ -42,9 +42,9 @@ class App extends Component {
           </header>
           <nav id="nav">
             <ul className="links">
-              <li className="active"><a href="index.html">This is Massively</a></li>
-              <li><a href="generic.html">Generic Page</a></li>
-              <li><a href="elements.html">Elements Reference</a></li>
+              <li className="active"><a href="index.html">Events</a></li>
+              <li><a href="generic.html">Members</a></li>
+              <li><a href="#signup">Sign Up</a></li>
             </ul>
             <ul className="icons">
               <li><a href="#" className="icon fa-twitter"><span className="label">Twitter</span></a></li>
@@ -63,7 +63,7 @@ class App extends Component {
                   facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
                   amet nullam sed etiam veroeros.</p>
               </header>
-              <a href="#" className="image main"><img src="./img/pic01.jpg" alt="" /></a>
+              <a href="#" className="image main"><img src="https://image.ibb.co/epsbxo/569A2325.jpg" alt="" /></a>
               <ul className="actions">
                 <li><a href="#" className="button big">Full Story</a></li>
               </ul>
