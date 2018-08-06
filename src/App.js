@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import logo from './logo.svg';
 // import './App.css';
 // import './index.css';
@@ -11,8 +12,12 @@ import './img/overlay.png';
 // import background from './img/bg.jpg';
 import overlay from './img/overlay.png';
 import EventPost from'./Components/EventPost';
+import MembersPage from'./Components/MembersPage';
 
 class App extends Component {
+  state = {
+    page: 'members'
+  };
   render() {
     // const bgStyle = {
     //   position: "absolute",
@@ -57,94 +62,96 @@ class App extends Component {
             </ul>
           </nav>
           <div id="main">
-            <EventPost isMainPost={true} />
-            <section className="posts">
-              <article>
-                <header>
-                  <span className="date">April 24, 2017</span>
-                  <h2><a href="#main">Sed magna<br />
-                    ipsum faucibus</a></h2>
-                </header>
-                <a href="#main" className="image fit"><img src="/allegro/src/img/pic02.jpg" alt="" /></a>
-                <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-                <ul className="actions">
-                  <li><a href="#main" className="button">Full Story</a></li>
-                </ul>
-              </article>
-              <article>
-                <header>
-                  <span className="date">April 22, 2017</span>
-                  <h2><a href="#main">Primis eget<br />
-                    imperdiet lorem</a></h2>
-                </header>
-                <a href="#main" className="image fit"><img src="/allegro/src/img/pic03.jpg" alt="" /></a>
-                <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-                <ul className="actions">
-                  <li><a href="#main" className="button">Full Story</a></li>
-                </ul>
-              </article>
-              <article>
-                <header>
-                  <span className="date">April 18, 2017</span>
-                  <h2><a href="#main">Ante mattis<br />
-                    interdum dolor</a></h2>
-                </header>
-                <a href="#main" className="image fit"><img src="./img/pic04.jpg" alt="" /></a>
-                <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-                <ul className="actions">
-                  <li><a href="#main" className="button">Full Story</a></li>
-                </ul>
-              </article>
-              <article>
-                <header>
-                  <span className="date">April 14, 2017</span>
-                  <h2><a href="#main">Tempus sed<br />
-                    nulla imperdiet</a></h2>
-                </header>
-                <a href="#main" className="image fit"><img src="./img/pic05.jpg" alt="" /></a>
-                <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-                <ul className="actions">
-                  <li><a href="#main" className="button">Full Story</a></li>
-                </ul>
-              </article>
-              <article>
-                <header>
-                  <span className="date">April 11, 2017</span>
-                  <h2><a href="#main">Odio magna<br />
-                    sed consectetur</a></h2>
-                </header>
-                <a href="#main" className="image fit"><img src="./img/pic06.jpg" alt="" /></a>
-                <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-                <ul className="actions">
-                  <li><a href="#main" className="button">Full Story</a></li>
-                </ul>
-              </article>
-              <article>
-                <header>
-                  <span className="date">April 7, 2017</span>
-                  <h2><a href="#main">Augue lorem<br />
-                    primis vestibulum</a></h2>
-                </header>
-                <a href="#main" className="image fit"><img src="./img/pic07.jpg" alt="" /></a>
-                <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-                <ul className="actions">
-                  <li><a href="#main" className="button">Full Story</a></li>
-                </ul>
-              </article>
-            </section>
-            <footer>
-              <div className="pagination">
-                <a href="#main" className="page active">1</a>
-                <a href="#main" className="page">2</a>
-                <a href="#main" className="page">3</a>
-                <span className="extra">&hellip;</span>
-                <a href="#main" className="page">8</a>
-                <a href="#main" className="page">9</a>
-                <a href="#main" className="page">10</a>
-                <a href="#main" className="next">Next</a>
-              </div>
-            </footer>
-
+            {this.state.page == 'members' && <MembersPage />}
+            {this.state.page == 'events' && <div>
+              <EventPost isMainPost={true} />
+              <section className="posts">
+                <article>
+                  <header>
+                    <span className="date">April 24, 2017</span>
+                    <h2><a href="#main">Sed magna<br />
+                      ipsum faucibus</a></h2>
+                  </header>
+                  <a href="#main" className="image fit"><img src="/allegro/src/img/pic02.jpg" alt="" /></a>
+                  <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+                  <ul className="actions">
+                    <li><a href="#main" className="button">Full Story</a></li>
+                  </ul>
+                </article>
+                <article>
+                  <header>
+                    <span className="date">April 22, 2017</span>
+                    <h2><a href="#main">Primis eget<br />
+                      imperdiet lorem</a></h2>
+                  </header>
+                  <a href="#main" className="image fit"><img src="/allegro/src/img/pic03.jpg" alt="" /></a>
+                  <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+                  <ul className="actions">
+                    <li><a href="#main" className="button">Full Story</a></li>
+                  </ul>
+                </article>
+                <article>
+                  <header>
+                    <span className="date">April 18, 2017</span>
+                    <h2><a href="#main">Ante mattis<br />
+                      interdum dolor</a></h2>
+                  </header>
+                  <a href="#main" className="image fit"><img src="./img/pic04.jpg" alt="" /></a>
+                  <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+                  <ul className="actions">
+                    <li><a href="#main" className="button">Full Story</a></li>
+                  </ul>
+                </article>
+                <article>
+                  <header>
+                    <span className="date">April 14, 2017</span>
+                    <h2><a href="#main">Tempus sed<br />
+                      nulla imperdiet</a></h2>
+                  </header>
+                  <a href="#main" className="image fit"><img src="./img/pic05.jpg" alt="" /></a>
+                  <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+                  <ul className="actions">
+                    <li><a href="#main" className="button">Full Story</a></li>
+                  </ul>
+                </article>
+                <article>
+                  <header>
+                    <span className="date">April 11, 2017</span>
+                    <h2><a href="#main">Odio magna<br />
+                      sed consectetur</a></h2>
+                  </header>
+                  <a href="#main" className="image fit"><img src="./img/pic06.jpg" alt="" /></a>
+                  <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+                  <ul className="actions">
+                    <li><a href="#main" className="button">Full Story</a></li>
+                  </ul>
+                </article>
+                <article>
+                  <header>
+                    <span className="date">April 7, 2017</span>
+                    <h2><a href="#main">Augue lorem<br />
+                      primis vestibulum</a></h2>
+                  </header>
+                  <a href="#main" className="image fit"><img src="./img/pic07.jpg" alt="" /></a>
+                  <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+                  <ul className="actions">
+                    <li><a href="#main" className="button">Full Story</a></li>
+                  </ul>
+                </article>
+              </section>
+              <footer>
+                <div className="pagination">
+                  <a href="#main" className="page active">1</a>
+                  <a href="#main" className="page">2</a>
+                  <a href="#main" className="page">3</a>
+                  <span className="extra">&hellip;</span>
+                  <a href="#main" className="page">8</a>
+                  <a href="#main" className="page">9</a>
+                  <a href="#main" className="page">10</a>
+                  <a href="#main" className="next">Next</a>
+                </div>
+              </footer>
+            </div>}
           </div>
           <div id="copyright">
             <ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li><li>Distributor: <a href="https://themewagon.com">ThemeWagon</a></li></ul>
