@@ -22,6 +22,14 @@ class MembersPage extends React.Component {
   render() {
     const gg = 'gg';
     return (<div>
+      {_.map(this.props.members, (d) => (
+        <div style={{width:'25%', height: 350, display: 'inline-block'}}>
+          <a href="#pro_pic" className="image w3-circle">
+            <img src={d.pro_pic} alt="" style={{
+              maxWidth: '100%',
+              height: 'auto'}}
+            />
+          </a></div>))}
       {console.log('this.props.members',this.props.members)}
     </div>);
   }
