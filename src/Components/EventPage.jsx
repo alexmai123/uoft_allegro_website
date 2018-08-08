@@ -14,19 +14,6 @@ class RunSettings extends React.Component {
   componentWillReceiveProps(props) {
   }
 
-  createReport() {
-  }
-
-
-  deleteReport(id) {
-  }
-
-  changeReport(e) {
-  }
-
-  changeCadence(e) {
-  }
-
   render() {
     return (<div>
     </div>);

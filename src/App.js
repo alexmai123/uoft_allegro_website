@@ -46,7 +46,7 @@ class App extends Component {
             </ul>
           </div>
           <header id="header">
-            <a href="index.html" className="logo">Massively</a>
+            <a href="index.html" className="logo">Allegro choir</a>
           </header>
           <nav id="nav">
             <ul className="links">
@@ -62,6 +62,7 @@ class App extends Component {
             </ul>
           </nav>
           <div id="main">
+            {console.log(this.state.page )}
             {this.state.page == 'members' && <MembersPage />}
             {this.state.page == 'events' && <div>
               <EventPost isMainPost={true} />
