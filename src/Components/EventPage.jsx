@@ -15,14 +15,23 @@ class RunSettings extends React.Component {
   }
 
   render() {
-    return (<div>
-    </div>);
+    return (<div className="App">
+        <div id="wrapper" className="fade-in">
+          
+          <header id="header">
+            <a className="logo">Event</a>
+          </header>
+        </div>
+        <div id="main">
+          <EventPost id={props.id}/>
+        </div>
+        </div>);
   }
 }
 
 const { func, shape } = PropTypes;
 
-RunSettings.propTypes = {
+RunSettings.propTypes = {id: PropTypes.number.isRequired
 };
 
 const mapStateToProps = state => ({
